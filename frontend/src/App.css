@@ -1,0 +1,325 @@
+.App {
+    text-align: center;
+    font-family: 'google-sans';
+}
+
+.headerWrapper {
+    display: flex;
+    padding: 15px;
+    padding-left: 30px;
+    border-bottom: 0.5px solid rgb(77, 77, 77);
+}
+
+.todayButton {
+    font-size: 15px;
+    padding: 5px 18px;
+    background-color: white;
+    border-radius: 4px;
+    border: .8px solid rgb(189, 189, 189);
+}
+
+.todayButton:hover {
+    background-color: rgb(238, 238, 238);
+    transform: scale(1.04);
+}
+
+.todayButton:active {
+    transform: scale(0.98);
+}
+
+.dateWrapper {
+    padding: 8px 5px;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.headArrow {
+    padding: 10px 20px 5px 20px;
+}
+
+.headArrow>* {
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.headArrow>*:hover {
+    background-color: rgb(227, 227, 227);
+    padding: 5px;
+}
+
+.headArrow :first-child {
+    margin-right: 20px;
+}
+
+.leftMenu {
+    display: flex;
+}
+
+.rightMenu {
+    display: flex;
+    margin-left: auto;
+}
+
+.headSearch {
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.profileImageWrapper {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 50px;
+    margin-left: 50px;
+}
+
+.profileImage {
+    width: 50px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+}
+
+.heading {
+    text-align: center;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: #06D85F;
+}
+
+.content {
+    overflow: auto;
+    display: flex;
+}
+
+.popupImage img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+.popupDesc {
+    border-left: 0.5px solid rgb(77, 77, 77);
+    margin-left: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+@media screen and (max-width: 700px) {
+    .box {
+        width: 70%;
+    }
+    .popup {
+        width: 70%;
+    }
+}
+
+.bodyWrapper {
+    display: flex;
+}
+
+.calenderWrapper {
+    width: 20%;
+}
+
+.schedulerWrapper {
+    width: 80%;
+    height: 100%;
+}
+
+.schedulerGrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-row: auto;
+}
+
+.weekday {
+    padding: 10px 0px 0px 0px;
+    border-right: .8px solid rgb(189, 189, 189);
+}
+
+.firstDay {
+    border-left: .8px solid rgb(189, 189, 189);
+}
+
+.dayWrapper {
+    height: 115px;
+    border-right: .8px solid rgb(189, 189, 189);
+    border-bottom: .8px solid rgb(189, 189, 189);
+    padding-top: 10px;
+}
+
+.current {
+    color: white;
+    background-color: blue;
+}
+
+.miniCalender {
+    padding: 20px;
+}
+
+.miniHeader {
+    display: flex;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.miniDate {
+    padding: 8px;
+}
+
+.miniArrow {
+    margin-left: auto;
+}
+
+.miniArrow>* {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.miniArrow>*:hover {
+    background-color: rgb(238, 238, 238)
+}
+
+.miniContent {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+.miniDate {
+    background-color: white;
+    border: 0px;
+}
+
+.miniCurr {
+    background-color: blue;
+    border-radius: 100px;
+    color: white;
+    width: 32px;
+}
+
+.miniCurrDay {
+    background-color: lightblue;
+    border-radius: 50px;
+    color: blue;
+    font-weight: 700;
+    width: 32px;
+}
+
+.signUpWrapper {
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.signBtn {
+    padding: 7px 15px;
+    background-color: rgb(63, 35, 219);
+    color: white;
+    border: 0px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.signBtn:hover {
+    transform: scale(1.09);
+}
+
+.signBtn:active {
+    transform: scale(1);
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: rgb(48, 48, 48);
+    text-align: left;
+}
+
+.userinput {
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    background-color: #FBFBFB;
+    position: relative;
+    top: -10px;
+    padding: 5px;
+}
+
+.userinput:focus {
+    outline: none !important;
+    border-bottom: 1px solid rgb(49, 21, 172);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.password:focus {
+    color: rgb(32, 22, 172);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sign-btn {
+    border: none;
+    background-color: rgb(32, 22, 172);
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    width: 120px;
+    margin-top: 15px;
+    transform: translate(80%);
+}
+
+.sign-form {
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.sign-width {
+    width: 30%;
+}
+
+.profile-width {
+    width: 50%;
+}
