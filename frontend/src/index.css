@@ -12,5 +12,35 @@ code {
 @font-face {
     font-family: "google-sans";
     src: local("google-sans"), url("./fonts/ProductSans-Regular.ttf") format("truetype");
-    font-weight: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "google-sans";
+    src: local("google-sans"), url("./fonts/ProductSans-Bold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "google-sans";
+    src: local("google-sans"), url("./fonts/ProductSans-Light.ttf") format("truetype");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "google-sans";
+    src: local("google-sans"), url("./fonts/ProductSans-Medium.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "google-sans";
+    src: local("google-sans"), url("./fonts/ProductSans-Black.ttf") format("truetype");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "google-sans";
+    src: local("google-sans"), url("./fonts/ProductSans-Thin.ttf") format("truetype");
+    font-weight: 100;
 }

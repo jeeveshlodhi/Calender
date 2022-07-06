@@ -1,12 +1,8 @@
-import React, { useState } from "react";
-import { monthNames } from "../util";
+import React from "react";
+import Day from "./day";
 
-export const Scheduler = ({ month }) => {
-    const today = new Date()
-    const todayDate = today.getDate()
-    const todayMonth = today.getMonth()
-    const todayYear = today.getFullYear()
-    const [currMonth, setCurrMonth] = useState(month)
+export const Scheduler = ({month}) => {
+
   return (
     <div className="schedulerGrid">
       <div className="weekday firstDay">Sun</div>
@@ -18,43 +14,9 @@ export const Scheduler = ({ month }) => {
       <div className="weekday">Sat</div>
 
       {month.map((row, i) => {
-        
-        // console.log(row[0]);
-        // return <div>{row[0].$D}</div>
         return row.map((day, j) => {
-        //   console.log(j);
-
-            if(j!==0){
-                if(day.$D === todayDate && day.$M === todayMonth && day.$y === todayYear && day.$D === 1){
-                    return <div className="dayWrapper current" key={`${i}${j}`}>{`${monthNames[day.$M]} ${day.$D} `}</div>;
-                }
-                else if(day.$D===1){
-                    return <div className="dayWrapper" key={`${i}${j}`}>{`${monthNames[day.$M]} ${day.$D} `}</div>;
-                }
-                else if(day.$D === todayDate && day.$M === todayMonth && day.$y === todayYear && day.$D !== 1){
-                    return <div className="dayWrapper current" key={`${i}${j}`}>{day.$D}</div>;
-                }
-                else{
-                    return <div className="dayWrapper" key={`${i}${j}`}>{day.$D}</div>;
-                }
-            }
-            else{
-                if(day.$D === todayDate && day.$M === todayMonth && day.$y === todayYear && day.$D === 1){
-                    return <div className="dayWrapper current firstDay" key={`${i}${j}`}>{`${monthNames[day.$M]} ${day.$D} `}</div>;
-                }
-                else if(day.$D===1){
-                    return <div className="dayWrapper firstDay" key={`${i}${j}`}>{`${monthNames[day.$M]} ${day.$D} `}</div>;
-                }
-                else if(day.$D === todayDate && day.$M === todayMonth && day.$y === todayYear && day.$D !== 1){
-                    return <div className="dayWrapper current firstDay" key={`${i}${j}`}>{day.$D}</div>;
-                }
-                else{
-                    return <div className="dayWrapper firstDay" key={`${i}${j}`}>{day.$D}</div>;
-                }
-            }
-          
-          
-          
+            return <Day key={j} day = {day} idx = {j} />
+   
         });
       })}
     </div>

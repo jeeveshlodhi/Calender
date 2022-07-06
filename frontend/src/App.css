@@ -3,6 +3,18 @@
     font-family: 'google-sans';
 }
 
+.logo {
+    display: flex;
+    font-size: 30px;
+    font-weight: 100;
+    padding: 5px 80px 5px 5px;
+}
+
+.logo :first-child {
+    padding: 0px 10px;
+    outline: 1px;
+}
+
 .headerWrapper {
     display: flex;
     padding: 15px;
@@ -144,6 +156,9 @@
     margin-left: 20px;
     padding: 20px;
     text-align: left;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: baseline;
 }
 
 @media screen and (max-width: 700px) {
@@ -187,16 +202,24 @@
     height: 115px;
     border-right: .8px solid rgb(189, 189, 189);
     border-bottom: .8px solid rgb(189, 189, 189);
+    border-left: .8px solid rgb(189, 189, 189);
     padding-top: 10px;
 }
 
 .current {
     color: white;
     background-color: blue;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: -5px;
 }
 
 .miniCalender {
     padding: 20px;
+    margin-top: 60px;
 }
 
 .miniHeader {
@@ -322,4 +345,204 @@
 
 .profile-width {
     width: 50%;
+}
+
+.msg {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.green {
+    background-color: rgba(72, 207, 72, 0.499);
+}
+
+.red {
+    background-color: rgba(255, 0, 0, 0.563);
+}
+
+.logOut {
+    padding: 7px 15px;
+    background-color: rgb(63, 35, 219);
+    color: white;
+    border: 0px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.eventWrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+}
+
+.eventForm {
+    width: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* padding: 20px; */
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    transition: all 5s ease-in-out;
+    box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.116);
+}
+
+.eventHeader {
+    background-color: rgba(212, 212, 212, 0.318);
+    padding: 10px 20px 8px 20px;
+    font-size: 20px;
+}
+
+.eventClose {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.createBtnWrapper {
+    padding: 10px 15px;
+    right: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left !important;
+    position: fixed;
+    width: inherit;
+}
+
+.createBtn {
+    background-color: white;
+    position: relative;
+    font-weight: 200;
+    border: 0px;
+    border-radius: 50px;
+    padding: 15px 8px;
+    width: 60%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.221);
+}
+
+.createBtn:active {
+    box-shadow: 0px 0px;
+    border: 0.5px solid rgba(199, 199, 199, 0.293);
+}
+
+.plus {
+    position: absolute;
+    margin-left: 0px;
+    z-index: 10;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.createBtnWrapper:active {
+    transform: translate(5px);
+}
+
+.eventHeadWrapper {
+    padding: 5px;
+}
+
+.eventGrid {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    column-gap: 5px;
+}
+
+.eventTitleInput {
+    padding-top: 3px;
+    border: 0px;
+    /* color: rgba(128, 128, 128, 0.708); */
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 13px;
+}
+
+.eventTitleInput:focus {
+    outline: none;
+    color: black;
+}
+
+.eventTitleInput~.focus-border {
+    position: absolute;
+    margin-top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: blue;
+    transition: 0.4s;
+    margin-left: 17%;
+}
+
+.eventTitleInput:focus~.focus-border {
+    width: 83%;
+    transition: 0.4s;
+}
+
+.eventIcon {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.eventDate {
+    font-size: 20px;
+    padding: 20px 10px;
+}
+
+.eventLabelWrapper {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+}
+
+.eventLabel {
+    margin: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.eventCheck {
+    color: white;
+    padding: 7px;
+    margin-top: 1px;
+    position: absolute;
+}
+
+.eventSubmitWrapper {
+    padding: 15px;
+    text-align: center;
+    border-top: 0.5px solid rgba(160, 160, 160, 0.245);
+}
+
+.eventSubmit {
+    padding: 8px 15px;
+    background-color: blue;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.eventList {
+    padding: 3px 0px;
+    overflow: hidden;
 }

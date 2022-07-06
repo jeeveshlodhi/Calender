@@ -12,7 +12,8 @@ const Calender = () => {
     setCurrentMonth(getMonth(currentMonthIdx));
   }, [currentMonthIdx]);
 
-  const { monthIndex, setSmallCalenderMonth, setDaySelected, daySelected } = useContext(GlobalContext);
+  const { monthIndex, setSmallCalenderMonth, setDaySelected, daySelected } =
+    useContext(GlobalContext);
 
   useEffect(() => {
     setCurrentMonthIdx(monthIndex);
@@ -28,13 +29,12 @@ const Calender = () => {
     const format = "DD-MM-YY";
     const nowDay = dayjs().format(format);
     const currDay = day.format(format);
-    const slcDay = daySelected && daySelected.format(format)
+    const slcDay = daySelected && daySelected.format(format);
     if (nowDay === currDay) {
       return "miniCurr";
-    } else if(currDay === slcDay){
-      return 'miniCurrDay'
-    }
-     else {
+    } else if (currDay === slcDay) {
+      return "miniCurrDay";
+    } else {
       return "";
     }
   };
@@ -42,6 +42,7 @@ const Calender = () => {
 
   return (
     <div className="miniCalender">
+     
       <div className="miniHeader">
         <div className="miniDate">
           {dayjs(new Date(dayjs().year(), currentMonthIdx)).format("MMMM YYYY")}
@@ -62,11 +63,14 @@ const Calender = () => {
         {currentMonth.map((row, i) => {
           return row.map((day, j) => {
             return (
-              <button className={`miniDate ${getDayClass(day)}`}
-              key={j} onClick={()=>{
-                setSmallCalenderMonth(currentMonthIdx)
-                setDaySelected(day)
-              }}  >
+              <button
+                className={`miniDate ${getDayClass(day)}`}
+                key={j}
+                onClick={() => {
+                  setSmallCalenderMonth(currentMonthIdx);
+                  setDaySelected(day);
+                }}
+              >
                 <span>{day.format("D")}</span>
               </button>
             );
