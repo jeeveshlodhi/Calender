@@ -15,7 +15,7 @@ const Day = ({ day, idx }) => {
     } else if (isCurrent === true) {
       setCurrent(() => false);
     }
-  }, []);
+  });
   useEffect(() => {
     const events = savedEvents.filter(
       (event) => dayjs(event.day).format("DD-MM-YY") === day.format("DD-MM-YY")
@@ -46,13 +46,16 @@ const Day = ({ day, idx }) => {
         )}
       </div>
       <div>
-        {
-            dayEvents.map((evt, i)=>(
-                <div key={i} style={{backgroundColor : evt.label }} className="eventList">
-                    {evt.title}
-                </div>
-            ))
-        }
+        {dayEvents.map((evt, i) => (
+          <div
+            key={i}
+            style={{ backgroundColor: evt.label }}
+            className="eventList"
+            onClick={()=>console.log('hello')}
+          >
+            {evt.title}
+          </div>
+        ))}
       </div>
     </div>
   );

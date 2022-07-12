@@ -38,7 +38,7 @@ const Calender = () => {
       return "";
     }
   };
-  console.log(currentMonth, currentMonthIdx);
+//   console.log(currentMonth, currentMonthIdx);
 
   return (
     <div className="miniCalender">

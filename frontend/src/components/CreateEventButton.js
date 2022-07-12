@@ -2,9 +2,15 @@ import React, { useContext } from "react";
 import GlobalContext from "../context/GlobalContext";
 
 const CreateEventButton = () => {
-  const { setShowEventModal } = useContext(GlobalContext);
+  const { setShowEventModal, isLogin } = useContext(GlobalContext);
+
+  const checkLogin = () =>{
+    if(isLogin ===true)
+        setShowEventModal(true)
+  }
+
   return (
-    <div className="createBtnWrapper" onClick={() => setShowEventModal(true)}>
+    <div className="createBtnWrapper" onClick={() => checkLogin}>
       <svg width="36" height="36" viewBox="0 0 36 36" className="plus">
         <path fill="#34A853" d="M16 16v14h4V20z"></path>
         <path fill="#4285F4" d="M30 16H20l-4 4h14z"></path>
