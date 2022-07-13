@@ -1,4 +1,4 @@
-# Calender Web App
+# Calendar Web App
 	
 Ultimate calendar app using  React JS.
  - Pick days, months, or years.
